@@ -1,0 +1,49 @@
+summary: Get a user with identifier
+description: |
+  TODO...
+tags:
+  - 'Service: Identity & Access Management'
+  - 'Resource: Users'
+  - 'Stability: 0 - Unavailable'
+operationId: getUser
+security:
+  - OAuth2:
+    - readUsers
+parameters:
+  - in: path
+    name: userId
+    schema:
+      type: integer
+    required: true
+    description: The identifier of the user.
+  - in: header
+    name: Accept-Language
+    description: |
+      The locale of the localizable response elements, according to the
+      [RFC 7231, section 5.3.3: Accept-Charset](https://tools.ietf.org/html/rfc7231#section-5.3.3).
+    schema:
+      type: string
+    example: en-US, en;q=0.9, *;q=0.5
+    required: true
+  - in: header
+    name: Accept-Charset
+    description: |
+      The charset of the response body according to the
+      [RFC 7231, section 5.3.3: Accept-Charset](https://tools.ietf.org/html/rfc7231#section-5.3.3).
+    schema:
+      type: string
+    example: utf-8, iso-8859-1;q=0.5, *;q=0.1
+    required: true
+responses:
+  '200':
+    description: The user, which has the given identifier.
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: string
+  '404':
+    description: User could not be found with specified identifier.
+    content:
+      $ref: '../../../variants/common/error.yml#/content'
