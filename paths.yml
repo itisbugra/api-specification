@@ -10,6 +10,9 @@
 /identity-access-management/users/{user_id}/permissions:
   get:
     $ref: './endpoints/iam/users/permissions/listPermissions.yml'
+/identity-access-management/users/{user_id}/activities:
+  get:
+    $ref: './endpoints/iam/users/activities/listUserActivities.yml'
 /identity-access-management/authentication/register:
   post:
     $ref: './endpoints/iam/authentication/signUp.yml'
