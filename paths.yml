@@ -16,6 +16,12 @@
 /identity-access-management/authentication/register:
   post:
     $ref: './endpoints/iam/authentication/signUp.yml'
+/identity-access-management/authentication/insecure-authentication/change-password:
+  post:
+    $ref: './endpoints/iam/authentication/insecure/changePassword.yml'
+/identity-access-management/authentication/two-factor-authentication/finalize:
+  post:
+    $ref: './endpoints/iam/authentication/tfa/completeSignIn.yml'
 /identity-access-management/access-control/permissions:
   get:
     $ref: './endpoints/iam/access-control/authorization/permissions/listPermissions.yml'
