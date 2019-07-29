@@ -20,6 +20,15 @@ $ ./generate_docs
 
 > The command will install `json-refs` package globally, if it does not exist.
 
+You can find the generated YAML files under `build` folder in root directory of the project.
+There ought to be two seperate files for specification declarations.
+
+ 1. `http.yml` for HTTP API,
+ 2. `ws.yml` for Streaming API.
+
+You can use [AsyncAPI Playground](https://playground.asyncapi.io/) to see a human-readable rendering of the Streaming API, or
+[Swagger Editor](https://editor.swagger.io/) for the HTTP API.
+
 ## License
 
 [MIT](https://github.com/Quessly/api-specification/blob/master/LICENSE.md)

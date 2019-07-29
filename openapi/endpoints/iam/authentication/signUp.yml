@@ -86,7 +86,7 @@ responses:
       address, which denies any other registration further to the given e-mail
       address.
     content:
-      $ref: '../../../variants/common/error.yml#/content'
+      $ref: '../../../../variants/common/error.yml#/content'
   '422':
     description: |
       The user could not be registered due to an invalid parameter.
@@ -94,4 +94,4 @@ responses:
       This could be either due to e-mail address validation or incorrect hash
       length given as a request body parameter.
     content:
-      $ref: '../../../variants/common/error.yml#/content'
+      $ref: '../../../../variants/common/error.yml#/content'

@@ -1,6 +1,7 @@
-openapi: 3.0.0
+asyncapi: '2.0.0-rc1'
+id: 'urn:com:smartylighting:streetlights:server'
 info:
-  title: Quessly
+  title: Quessly Streaming API
   description: >
     ## API stability
 
@@ -53,18 +54,19 @@ info:
     url: https://github.com/Quessly
   version: 0.0.1-beta
 servers:
-  - url: https://api.quessly.com/v1
+  - url: wss://api.quessly.com/v1
+    protocol: websocket
     description: Main (production) server
-  - url: https://staging.api.quessly.com
+  - url: wss://staging.api.quessly.com
+    protocol: websocket
     description: Staging server
-tags:
-  $ref: './tags.yml'
-paths:
-  $ref: './paths.yml'
+defaultContentType: application/json
+channels:
+  $ref: './asyncapi/channels.yml'
 components:
+  messages:
+    $ref: './asyncapi/messages.yml'
   schemas:
-    $ref: './schemas.yml'
-  responses:
-    $ref: './responses.yml'
+    $ref: './asyncapi/schemas.yml'
   securitySchemes:
-    $ref: './securitySchemes.yml'
+    $ref: './asyncapi/securitySchemes.yml'

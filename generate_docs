@@ -23,7 +23,10 @@ rm -fr $BUILD_FOLDER
 echo "Creating a new build directory."
 mkdir $BUILD_FOLDER
 
-echo "Resolving cross-references."
-json-refs resolve -y main.yml > $BUILD_FOLDER/main.yml
+echo "Resolving cross-references for HTTP API."
+json-refs resolve -y http.yml > $BUILD_FOLDER/http.yml
+
+echo "Resolving cross-references for Streaming API."
+json-refs resolve -y ws.yml > $BUILD_FOLDER/ws.yml
 
 echo "Build completed."

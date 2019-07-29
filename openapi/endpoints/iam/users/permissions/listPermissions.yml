@@ -107,7 +107,7 @@ responses:
                               - mediocre
                               - severe
                     inserted_at:
-                      $ref: ../../../../variants/common/timestamp.yml
+                      $ref: ../../../../../variants/common/timestamp.yml
                   description: Granted permission set.
                 authority:
                   type: object
@@ -124,13 +124,13 @@ responses:
                       description: Registration date of the user in ISO 8601 format.
                   description: The authority made the grant.
                 valid_after:
-                  $ref: ../../../../variants/common/timestamp.yml
+                  $ref: ../../../../../variants/common/timestamp.yml
                 valid_until:
-                  $ref: ../../../../variants/common/timestamp.yml
+                  $ref: ../../../../../variants/common/timestamp.yml
                 inserted_at:
-                  $ref: ../../../../variants/common/timestamp.yml
+                  $ref: ../../../../../variants/common/timestamp.yml
   '404':
     description: |
       No user with given identifier is existent.
     content:
-      $ref: '../../../../variants/common/error.yml#/content'
+      $ref: '../../../../../variants/common/error.yml#/content'

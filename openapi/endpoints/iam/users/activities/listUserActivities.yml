@@ -130,7 +130,7 @@ responses:
                         type: string
                         description: Code of the country user connected from.
                       ip_location:
-                        $ref: ../../../../variants/iam/point.yml
+                        $ref: ../../../../../variants/iam/point.yml
                       metro_code:
                         type: string
                         description: Metro code of the coordinate user connected from.
@@ -147,7 +147,7 @@ responses:
                         type: string
                         description: Zip code of the coordinate.
                       geo_location:
-                        $ref: ../../../../variants/iam/point.yml
+                        $ref: ../../../../../variants/iam/point.yml
                       inserted_at:
                         type: string
                         description: The timestamp of the activity.

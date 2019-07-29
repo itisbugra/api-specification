@@ -1,11 +1,11 @@
-summary: Patch an existing question context with identifier
+summary: Create a new question context
 description: |
-  Patches the question context with given identifier by provided values.
+  Adds a new question context.
 tags:
   - 'Service: Questionbase'
   - 'Resource: Question contexts'
   - 'Stability: 0 - Unavailable'
-operationId: updateContext
+operationId: createContext
 security:
   - OAuth2:
     - manageQuestionContexts
@@ -30,17 +30,9 @@ parameters:
       default: utf-8
     example: utf-8, iso-8859-1;q=0.5, *;q=0.1
     required: true
-  - in: path
-    name: contextId
-    description: |
-      The identifier of the context.
-    schema:
-      type: integer
-    example: 0
-    required: true
 requestBody:
   description: |
-    The new metadata information for the context.
+    The metadata information for the new context.
   required: true
   content:
     application/json; charset=utf-8:
@@ -91,13 +83,13 @@ requestBody:
             description: Specifies visibility of the context to the platform users.
             default: false
 responses:
-  '200':
-    description: The context has been updated.
+  '201':
+    description: The context has been created.
     headers:
       Location:
         schema:
           type: string
-        description: The location for the context updated.
+        description: The location for the context created.
         example: /qss/contexts/1
     content:
       application/json:
@@ -106,11 +98,11 @@ responses:
           properties:
             id:
               type: integer
-              description: Identifier of the context.
+              description: Identifier of the new context.
               example: 1
               minimum: 0
   '422':
     description: |
       TODO...
     content:
-      $ref: '../../../variants/common/error.yml#/content'
+      $ref: '../../../../variants/common/error.yml#/content'

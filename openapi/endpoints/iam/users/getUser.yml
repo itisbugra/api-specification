@@ -60,7 +60,7 @@ responses:
                     description: If true, this email address is primary, which can be
                       used in user authentication.
                   inserted_at:
-                    "$ref": ../../../variants/common/timestamp.yml
+                    $ref: ../../../../variants/common/timestamp.yml
                     description: The time email was created.
             personal_information:
               type: object
@@ -118,7 +118,7 @@ responses:
                 phone_numbers:
                   type: array
                   items:
-                    $ref: ../../../variants/common/timestamp.yml
+                    $ref: ../../../../variants/common/timestamp.yml
                 addresses:
                   type: array
                   items:
@@ -168,4 +168,4 @@ responses:
   '404':
     description: User could not be found with specified identifier.
     content:
-      $ref: '../../../variants/common/error.yml#/content'
+      $ref: '../../../../variants/common/error.yml#/content'

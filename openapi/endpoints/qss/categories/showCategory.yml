@@ -49,4 +49,4 @@ responses:
     description: |
       The category with given identifier could not be found.
     content:
-      $ref: '../../../variants/common/error.yml#/content'
+      $ref: '../../../../variants/common/error.yml#/content'

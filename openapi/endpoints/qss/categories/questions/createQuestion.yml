@@ -52,7 +52,7 @@ requestBody:
           - mimeType
         properties:
           interactivity:
-            $ref: '../../../../variants/qss/questionInteractivity.yml'
+            $ref: '../../../../../variants/qss/questionInteractivity.yml'
           body:
             type: string
             description: >
@@ -180,9 +180,9 @@ responses:
 
       Possibly, there is another category with same parent association and name.
     content:
-      $ref: '../../../../variants/common/error.yml#/content'
+      $ref: '../../../../../variants/common/error.yml#/content'
   '422':
     description: |
       TODO...
     content:
-      $ref: '../../../../variants/common/error.yml#/content'
+      $ref: '../../../../../variants/common/error.yml#/content'
